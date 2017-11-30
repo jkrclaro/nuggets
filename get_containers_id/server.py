@@ -15,18 +15,6 @@ def docker(*args):
         print 'Error: {0} -> {1}'.format(' '.join(cmd), stderr)
     return stderr + stdout
 
-
-def docker_ps_to_array(output):
-    all = []
-    for c in [line.split() for line in output.splitlines()[1:]]:
-        each = {}
-        each['id'] = c[0]
-        each['image'] = c[1]
-        each['name'] = c[-1]
-        each['ports'] = c[-2]
-        all.append(each)
-    return all
-
 @app.route('/containers/<container_id>', methods=['GET'])
 def containers(container_id=None):
     output = docker('inspect', container_id)
