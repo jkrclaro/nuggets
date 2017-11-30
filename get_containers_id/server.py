@@ -1,7 +1,7 @@
 import json
 from subprocess import Popen, PIPE
 
-from flask import Flask, Response, request
+from flask import Flask, Response
 
 app = Flask(__name__)
 
