@@ -15,4 +15,4 @@ curl -s -X GET -H 'Accept: application/json' http://localhost:8080/containers?st
 ```
 
 You should get the same result as you would if you were to visit
-http://localhost:8080/containers in your browser
+http://localhost:8080/containers?state=running in your browser
