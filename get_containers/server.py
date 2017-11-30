@@ -33,4 +33,4 @@ def containers():
     resp = json.dumps(docker_ps_to_array(output))
     return Response(response=resp, mimetype="application/json")
 
-app.run(debug=True)
+app.run(port=8080, debug=True)
